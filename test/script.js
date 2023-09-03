@@ -21,5 +21,17 @@ const checkWinner=() =>{
     }
 };
 const handleClick=(cell,index)=>{
-    if(gameBoard)
+    if(gameBoard[index]===''&&gameActive){
+        cell.value=currentPlayer;
+        gameBoard[index]=currentPlayer;
+        checkWinner();
+        if(gameActive)
+        {
+            currentPlayer=currentPlayer==='X'?'O':'X';
+            resultText.textContent='Player${currentPlayer} turn';
+        }
+    }
+};
+cells.forEach(cell,index) => {
+    cell.addEventListener('click',()=>handleClick(cell,index));
 }
