@@ -32,6 +32,14 @@ const handleClick=(cell,index)=>{
         }
     }
 };
-cells.forEach(cell,index) => {
+cells.forEach=(cell,index) => {
     cell.addEventListener('click',()=>handleClick(cell,index));
-}
+};
+resetButton.addEventListener('click',()=>
+{
+    cells.forEach((cell,index)=>{
+        cell.value='';
+        gameBoard[index]='';
+    });
+    currentPlayer=''
+});
