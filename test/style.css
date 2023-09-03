@@ -18,5 +18,34 @@
 
 }
 body{
-    fon
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+h1{
+    font-size: 36px;
+}
+#tic-tac-toe-container{
+    text-align: center;
+}
+#tic-tac-toe-board{
+    display: grid;
+    grid-template-columns: repeat(3,100px);
+    grid-gap:5px;
+    margin-top: 20px;
+}
+input:hover{
+    background-color: #333;
+    color: white;
+}
+#result-container{
+    margin-top: 20px;
 }
