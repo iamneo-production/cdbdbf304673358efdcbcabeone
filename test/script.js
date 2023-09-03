@@ -41,5 +41,8 @@ resetButton.addEventListener('click',()=>
         cell.value='';
         gameBoard[index]='';
     });
-    currentPlayer=''
+    currentPlayer='X';
+    resultText.textContent='Player ${currentPlayers} turn';
+    resetButton.disabled=true;
+    gameActive=true;
 });
